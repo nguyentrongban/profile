@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>TD Tech – Thiết Kế Website Doanh Nghiệp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#0071e3;
+  --dark:#0f172a;
+  --gray:#6b7280;
+}
+*{box-sizing:border-box;font-family:'Inter',sans-serif}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--dark);
+  overflow-x:hidden;
+}
+section{padding:110px 20px}
+.container{max-width:1200px;margin:auto}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(180deg,#f5f9ff,#fff);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.hero h1{
+  font-size:52px;
+  font-weight:700;
+}
+.hero p{
+  font-size:18px;
+  color:var(--gray);
+  line-height:1.7;
+  margin:25px 0 40px;
+}
+.btn{
+  display:inline-block;
+  padding:16px 36px;
+  border-radius:40px;
+  font-weight:600;
+  background:var(--blue);
+  color:#fff;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(0,113,227,.35)}
+
+.hero-visual{
+  position:relative;
+  height:320px;
+}
+.ui-box{
+  position:absolute;
+  padding:22px 36px;
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);
+  font-weight:700;
+  animation:float 4s ease-in-out infinite;
+}
+.ui-box:nth-child(1){top:40px;left:40px}
+.ui-box:nth-child(2){top:140px;left:140px;animation-delay:1s}
+.ui-box:nth-child(3){top:80px;right:40px;animation-delay:2s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+}
+
+/* PRICING */
+.pricing-title{text-align:center;margin-bottom:70px}
+.pricing-title h2{font-size:40px}
+.pricing-title p{color:var(--gray)}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:35px;
+}
+.plan{
+  border-radius:30px;
+  padding:45px;
+  background:#f9fafb;
+  transition:.5s;
+  transform:scale(.9);
+  opacity:.4;
+}
+.plan.active{
+  transform:scale(1);
+  opacity:1;
+  background:#fff;
+  box-shadow:0 40px 90px rgba(0,0,0,.18);
+}
+.plan h3{font-size:26px}
+.old-price{
+  text-decoration:line-through;
+  color:#9ca3af;
+}
+.price{
+  font-size:38px;
+  font-weight:700;
+  color:var(--blue);
+  margin:10px 0;
+}
+.badge{
+  display:inline-block;
+  font-size:12px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:#ffe4e6;
+  color:#be123c;
+  margin-bottom:15px;
+}
+.plan ul{padding-left:18px;color:#374151}
+.plan li{margin:10px 0}
+
+.plan .btn{margin-top:25px;width:100%;text-align:center}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:80px 20px;
+}
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+footer h4{color:#fff;margin-bottom:15px}
+footer a{color:#cbd5f5;text-decoration:none;display:block;margin:8px 0}
+.copy{text-align:center;margin-top:50px;color:#94a3b8;font-size:14px}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .pricing{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Thiết Kế Website<br>Chuẩn Doanh Nghiệp</h1>
+      <p>TD Tech giúp doanh nghiệp nhỏ có website hiện đại, chuẩn mobile, dễ bán hàng và tăng uy tín thương hiệu.</p>
+      <a href="#pricing" class="btn">Xem Gói Dịch Vụ</a>
+    </div>
+
+    <div class="hero-visual">
+      <div class="ui-box">HTML</div>
+      <div class="ui-box">CSS</div>
+      <div class="ui-box">JS</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-title">
+      <h2>Chọn Gói Phù Hợp</h2>
+      <p>Scroll tới đâu – gói đó nổi bật</p>
+    </div>
+
+    <div class="pricing">
+      <div class="plan" data-msg="Cơ Bản">
+        <span class="badge">Ưu đãi</span>
+        <h3>Cơ Bản</h3>
+        <div class="old-price">1.200.000đ</div>
+        <div class="price">500.000đ</div>
+        <ul>
+          <li>Website 2 trang</li>
+          <li>Chuẩn mobile</li>
+          <li>Hoàn thành 15 ngày</li>
+        </ul>
+        <a class="btn" target="_blank"
+           href="https://zalo.me/0912379915?text=Tôi%20muốn%20đặt%20gói%20CƠ%20BẢN">
+           Chọn gói này
+        </a>
+      </div>
+
+      <div class="plan" data-msg="Nâng Cao">
+        <span class="badge">Bán chạy</span>
+        <h3>Nâng Cao</h3>
+        <div class="old-price">1.800.000đ</div>
+        <div class="price">1.200.000đ</div>
+        <ul>
+          <li>Website 4 trang</li>
+          <li>Thiết kế riêng</li>
+          <li>Hoàn thành 20 ngày</li>
+        </ul>
+        <a class="btn" target="_blank"
+           href="https://zalo.me/0912379915?text=Tôi%20muốn%20đặt%20gói%20NÂNG%20CAO">
+           Chọn gói này
+        </a>
+      </div>
+
+      <div class="plan" data-msg="Cao Cấp">
+        <span class="badge">Chuyên nghiệp</span>
+        <h3>Cao Cấp</h3>
+        <div class="old-price">2.800.000đ</div>
+        <div class="price">2.100.000đ</div>
+        <ul>
+          <li>Website bán hàng</li>
+          <li>Tối ưu SEO</li>
+          <li>Hoàn thành 30 ngày</li>
+        </ul>
+        <a class="btn" target="_blank"
+           href="https://zalo.me/0912379915?text=Tôi%20muốn%20đặt%20gói%20CAO%20CẤP">
+           Chọn gói này
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>TD Tech</h4>
+      <p>Thiết kế website hiện đại – chuẩn Apple style – dành cho doanh nghiệp nhỏ.</p>
+    </div>
+    <div>
+      <h4>Liên hệ</h4>
+      <a href="https://zalo.me/0912379915">Zalo: 0912379915</a>
+    </div>
+    <div>
+      <h4>Designer</h4>
+      <p>TD Tech</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 TD Tech. All rights reserved.</div>
+</footer>
+
+<script>
+const plans=document.querySelectorAll('.plan');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      plans.forEach(p=>p.classList.remove('active'));
+      e.target.classList.add('active');
+    }
+  })
+},{threshold:.6});
+plans.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>
