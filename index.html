@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dịch Vụ Thiết Kế Website | TD Tech</title>
+
+<style>
+:root{
+  --blue:#1e88e5;
+  --blue-dark:#0d47a1;
+  --bg:#f4f8ff;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:#1f2937;
+  overflow-x:hidden;
+}
+
+section{padding:100px 20px}
+.container{max-width:1100px;margin:auto}
+
+/* ===== HERO ===== */
+.hero{text-align:center}
+.hero h1{font-size:42px;color:var(--blue-dark)}
+.hero p{max-width:620px;margin:20px auto 30px;color:#555}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:30px;
+  font-weight:600;
+  margin:6px;
+  text-decoration:none;
+}
+
+.primary{background:var(--blue);color:#fff}
+.outline{border:2px solid var(--blue);color:var(--blue)}
+
+.hero-visual{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  margin-top:60px;
+}
+
+.ui-box{
+  background:#fff;
+  padding:18px 32px;
+  border-radius:20px;
+  font-weight:700;
+  box-shadow:0 20px 45px rgba(0,0,0,.15);
+  animation:float 3s ease-in-out infinite;
+}
+
+.ui-box:nth-child(2){animation-delay:.3s}
+.ui-box:nth-child(3){animation-delay:.6s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-16px)}
+}
+
+/* ===== PRICING ===== */
+.pricing-title{text-align:center;font-size:34px}
+.pricing-sub{text-align:center;color:#666;margin-bottom:70px}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+/* Apple style cards */
+.card{
+  background:#fff;
+  border-radius:28px;
+  padding:42px 32px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 20px 60px rgba(0,0,0,.12);
+  transition:all .6s cubic-bezier(.4,0,.2,1);
+  opacity:.4;
+  transform:scale(.88);
+}
+
+.card.focus{
+  opacity:1;
+  transform:scale(1.08);
+  box-shadow:0 50px 120px rgba(30,136,229,.35);
+  z-index:2;
+}
+
+.card.near{
+  opacity:.75;
+  transform:scale(.95);
+}
+
+.badge{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ff5252;
+  color:#fff;
+  padding:6px 18px;
+  font-size:12px;
+  border-radius:20px;
+}
+
+.old-price{color:#999;text-decoration:line-through}
+.price{font-size:34px;color:var(--blue);font-weight:700}
+.time{color:#666;margin:10px 0 20px}
+
+.features{text-align:left;margin-bottom:25px}
+.features li{margin:10px 0}
+
+/* ===== CTA ===== */
+.cta{
+  background:linear-gradient(135deg,#1e88e5,#42a5f5);
+  color:#fff;
+  text-align:center;
+}
+
+.cta h2{font-size:32px;margin-bottom:25px}
+.cta a{background:#fff;color:#1e88e5}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#0d47a1;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{font-size:34px}
+  .card.focus{transform:scale(1.03)}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero container">
+  <h1>Lập Trình Viên Web Cho Doanh Nghiệp Nhỏ</h1>
+  <p>Thiết kế website hiện đại – chuẩn mobile – giao đúng hẹn – chi phí hợp lý</p>
+
+  <a href="#pricing" class="btn primary">Xem Gói Dịch Vụ</a>
+  <a href="https://zalo.me/0912379915" class="btn outline">Nhắn Zalo</a>
+
+  <div class="hero-visual">
+    <div class="ui-box">HTML</div>
+    <div class="ui-box">CSS</div>
+    <div class="ui-box">JS</div>
+  </div>
+</section>
+
+<section id="pricing" class="container">
+  <h2 class="pricing-title">Gói Dịch Vụ</h2>
+  <p class="pricing-sub">Lướt tới đâu – gói đó tự nổi bật</p>
+
+  <div class="pricing">
+
+    <div class="card">
+      <div class="badge">ƯU ĐÃI</div>
+      <h3>Gói Cơ Bản</h3>
+      <div class="old-price">800.000đ</div>
+      <div class="price">500.000đ</div>
+      <div class="time">15 ngày</div>
+      <ul class="features">
+        <li>✔ Website giới thiệu</li>
+        <li>✔ Chuẩn mobile</li>
+        <li>✔ SEO cơ bản</li>
+      </ul>
+      <a class="btn primary"
+        href="https://zalo.me/0912379915?text=T%C3%B4i%20mu%E1%BB%91n%20%C4%91%E1%BA%B7t%20g%C3%B3i%20C%C6%A1%20B%E1%BA%A3n">
+        Chọn Gói
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="badge">BÁN CHẠY</div>
+      <h3>Gói Nâng Cao</h3>
+      <div class="old-price">1.600.000đ</div>
+      <div class="price">1.300.000đ</div>
+      <div class="time">20 ngày</div>
+      <ul class="features">
+        <li>✔ Thiết kế theo yêu cầu</li>
+        <li>✔ 3–4 trang</li>
+        <li>✔ Tối ưu tốc độ</li>
+      </ul>
+      <a class="btn primary"
+        href="https://zalo.me/0912379915?text=T%C3%B4i%20mu%E1%BB%91n%20%C4%91%E1%BA%B7t%20g%C3%B3i%20N%C3%A2ng%20Cao">
+        Chọn Gói
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="badge">CAO CẤP</div>
+      <h3>Gói Cao Cấp</h3>
+      <div class="old-price">3.000.000đ</div>
+      <div class="price">2.500.000đ</div>
+      <div class="time">30 ngày</div>
+      <ul class="features">
+        <li>✔ Website bán hàng</li>
+        <li>✔ Giao diện hiện đại</li>
+        <li>✔ Hỗ trợ dài hạn</li>
+      </ul>
+      <a class="btn primary"
+        href="https://zalo.me/0912379915?text=T%C3%B4i%20mu%E1%BB%91n%20%C4%91%E1%BA%B7t%20g%C3%B3i%20Cao%20C%E1%BA%A5p">
+        Chọn Gói
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Sẵn Sàng Làm Website?</h2>
+  <a href="https://zalo.me/0912379915" class="btn">Nhắn Zalo Ngay</a>
+</section>
+
+<footer>
+  © Công ty TD Tech — Thiết kế & phát triển bởi TD Tech
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const focusCard = () => {
+  let center = window.innerHeight / 2;
+
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const cardCenter = rect.top + rect.height / 2;
+    const distance = Math.abs(center - cardCenter);
+
+    card.classList.remove('focus','near');
+
+    if(distance < 120){
+      card.classList.add('focus');
+    } else if(distance < 260){
+      card.classList.add('near');
+    }
+  });
+};
+
+window.addEventListener('scroll', focusCard);
+focusCard();
+</script>
+
+</body>
+</html>
